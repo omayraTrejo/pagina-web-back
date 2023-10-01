@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "pago-servicio",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "tecnywcy_oswaldo",
+    "password": "lunitabb3",
+    "database": "tecnywcy_pago-servicio",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
