@@ -1,9 +1,13 @@
 describe('Sum', () => {
-    it('Should return the correct sum', () => {
+  it('Should return the correct sum', () => {
       const sum = (a, b) => a + b;
-  
-      expect(sum(1, 2)).toBe(3);
-      expect(sum(2, 3)).toBe(5);
-      expect(sum(3, 4)).toBe(7);
-    });
+
+      if (sum(1, 2) === 3 &&
+          sum(2, 3) === 5 &&
+          sum(3, 4) === 7) {
+          console.log('All tests passed.');
+      } else {
+          throw new Error('One or more tests failed.');
+      }
   });
+});

@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("install"){
             steps{
-                die("build_node"){
+                dir("build_node"){
                     sh "npm install"
                 }
             }
