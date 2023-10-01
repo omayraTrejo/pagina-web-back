@@ -13,8 +13,9 @@ pipeline{
         }
         stage ('test'){
             steps{
-                dir("build_node")
-                sh "npm test"
+                dir("build_node"){
+                    sh "npm test"
+                }
             }
         }
         stage ('docker Build'){
