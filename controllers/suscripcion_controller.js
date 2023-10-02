@@ -1,3 +1,5 @@
+//HU:3 GESTIONAR SUSCRIPCIONES 
+
 const SuscripcionRepository = require('../repositories/suscripcion.repository');
 const ResponseHelper = require('../utils/helper_response');
 

@@ -1,3 +1,4 @@
+// HU4:Registro Factura
 const FacturaRepository = require('../repositories/factura.repository');
 const ResponseHelper = require('../utils/helper_response');
 const facturaRepository = new FacturaRepository();
