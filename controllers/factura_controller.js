@@ -23,8 +23,7 @@ const FacturaController = {
       return res.json(ResponseHelper.error(error.message));
     }
   },
-
-  // este comentario es una preba para jenkins
+//prueba para jenking
 
   async eliminarFactura(req, res) {
     try {
