@@ -23,6 +23,8 @@ const FacturaController = {
     }
   },
 
+  // este comentario es una preba para jenkins
+
   async eliminarFactura(req, res) {
     try {
       const { id } = req.params;
