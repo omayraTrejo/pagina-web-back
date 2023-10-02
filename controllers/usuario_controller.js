@@ -1,3 +1,4 @@
+
 const UsuarioRepository = require('../repositories/usuario.repository');
 const DetalleUsuarioFacturaRepository = require('../repositories/detalle.factura.repository');
 const ResponseHelper = require('../utils/helper_response');
@@ -17,16 +18,6 @@ const UsuarioController = {
     }
   },
 
-  async listarTodosUsuarios(req, res) {
-    try {
-        const { page = 1, limit = 1000 } = req.query;
-        const usuarios = await usuarioRepository.listarUsuarioConSuscripciones(page, limit);
-        return res.json(ResponseHelper.success(usuarios.data,ResponseHelper.listar('usuarios')));
-    } catch (error) {
-      console.error('Error al listar los clientes:', error);
-      return res.json(ResponseHelper.error(ResponseHelper.errorListar('usuarios')));
-    }
-  },
 
   async crearUsuario(req, res) {
     try {
@@ -45,6 +36,17 @@ const UsuarioController = {
     }
   },
 
+  async listarTodosUsuarios(req, res) {
+    try {
+        const { page = 1, limit = 1000 } = req.query;
+        const usuarios = await usuarioRepository.listarUsuarioConSuscripciones(page, limit);
+        return res.json(ResponseHelper.success(usuarios.data,ResponseHelper.listar('usuarios')));
+    } catch (error) {
+      console.error('Error al listar los clientes:', error);
+      return res.json(ResponseHelper.error(ResponseHelper.errorListar('usuarios')));
+    }
+  },
+  
   async actualizarUsuario(req, res) {
     try {
       const { id } = req.params;

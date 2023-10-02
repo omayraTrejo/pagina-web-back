@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "",
-    "database": "pago-servicio",
+    "database": "tecnywcy_pago-servicio",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -14,9 +14,9 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "tecnywcy_oswaldo",
+    "username": "",
     "password": "lunitabb3",
-    "database": "tecnywcy_pago-servicio",
+    "database": "",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

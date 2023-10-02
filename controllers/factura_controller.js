@@ -23,6 +23,7 @@ const FacturaController = {
       return res.json(ResponseHelper.error(error.message));
     }
   },
+//prueba para jenking
 
   async eliminarFactura(req, res) {
     try {
