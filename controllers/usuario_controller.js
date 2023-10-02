@@ -23,7 +23,7 @@ const UsuarioController = {
         const usuarios = await usuarioRepository.listarUsuarioConSuscripciones(page, limit);
         return res.json(ResponseHelper.success(usuarios.data,ResponseHelper.listar('usuarios')));
     } catch (error) {
-      console.error('Error al listar los usuarios:', error);
+      console.error('Error al listar los clientes:', error);
       return res.json(ResponseHelper.error(ResponseHelper.errorListar('usuarios')));
     }
   },
@@ -40,8 +40,8 @@ const UsuarioController = {
       );
       return res.status(201).json(ResponseHelper.success(usuario,ResponseHelper.created('usuario')));
     } catch (error) {
-      console.error('Error al crear el usuario:', error);
-      return res.json(ResponseHelper.error('Error al crear el usuario'));
+      console.error('Error al crear el cliente:', error);
+      return res.json(ResponseHelper.error('Error al crear el cliente'));
     }
   },
 
@@ -60,7 +60,7 @@ const UsuarioController = {
       return res.json(ResponseHelper.success(usuario,ResponseHelper.updated('usuario')));
     } catch (error) {
       console.error('Error al actualizar el usuario:', error);
-      return res.json(ResponseHelper.error('Error al actualizar el usuario'));
+      return res.json(ResponseHelper.error('Error al actualizar el cliente'));
     }
   },
 
@@ -71,7 +71,7 @@ const UsuarioController = {
       return res.json(ResponseHelper.success(usuario,ResponseHelper.deleted('usuario')));
     } catch (error) {
       console.error('Error al eliminar el usuario:', error);
-      return res.json(ResponseHelper.error('Error al eliminar el usuario'));
+      return res.json(ResponseHelper.error('Error al eliminar el cliente'));
     }
   },
 
@@ -81,8 +81,8 @@ const UsuarioController = {
       const usuario = await usuarioRepository.activarUsuario(id);
       return res.json(ResponseHelper.success(usuario,ResponseHelper.activated('usuario')));
     } catch (error) {
-      console.error('Error al activar el usuario:', error);
-      return res.json(ResponseHelper.error('Error al activar el usuario'));
+      console.error('Error al activar el cliente:', error);
+      return res.json(ResponseHelper.error('Error al activar el cliente'));
     }
   },
 
@@ -92,8 +92,8 @@ const UsuarioController = {
       const usuario = await usuarioRepository.desactivarUsuario(id);
       return res.json(ResponseHelper.success(usuario,ResponseHelper.desactivated('usuario')));
     } catch (error) {
-      console.error('Error al desactivar el usuario:', error);
-      return res.json(ResponseHelper.error('Error al desactivar el usuario' ));
+      console.error('Error al desactivar el cliente:', error);
+      return res.json(ResponseHelper.error('Error al desactivar el cliente' ));
     }
   },
 
@@ -102,8 +102,8 @@ const UsuarioController = {
       const usuario = await usuarioRepository.usuarioSuscripciones();
       return res.json(ResponseHelper.success(usuario,ResponseHelper.listar("Usuarios Con suscripciones") ));
     } catch (error) {
-      console.error('Error al desactivar el usuario:', error);
-      return res.json(ResponseHelper.error('Error al desactivar el usuario' ));
+      console.error('Error al desactivar el cliente:', error);
+      return res.json(ResponseHelper.error('Error al desactivar el cliente' ));
     }
   },
 
