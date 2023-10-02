@@ -36,7 +36,7 @@ const ServicioController = {
       return res.json(ResponseHelper.error('Error al crear el servicio'));
     }
   },
-
+//prueba 
   async actualizarServicio(req, res) {
     try {
       const { id } = req.params;
